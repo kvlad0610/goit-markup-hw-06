@@ -315,9 +315,11 @@ img {
   border-radius: 50%;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .modal-subtitle {
+  margin-bottom: 30px;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -325,6 +327,91 @@ img {
   text-align: center;
 
   color: var(--title-text-color);
+}
+
+.form-field-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 12px 44px 12px 16px;
+  margin-bottom: 28px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-field-input:focus {
+  outline: none;
+}
+
+.form-field-input:focus:required:valid:not(:placeholder-shown) {
+  border: 1px solid green;
+}
+
+.form-field-input:focus:required:invalid:not(:placeholder-shown) {
+  border: 1px solid red;
+}
+
+.comment {
+  width: 100%;
+  height: 120px;
+  padding: 12px 44px 12px 16px;
+  margin-bottom: 20px;
+
+  resize: none;
+
+  color: #212121;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.comment:focus {
+  outline: none;
+}
+
+.label {
+  color: #212121;
+}
+
+.label-agreement {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.contract {
+  text-decoration: underline;
+
+  color: #2196f3;
+}
+
+.form-btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+
+  border: none;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:focus,
+.modal-button:focus,
+.form-btn:focus {
+  outline: none;
 }
 
 /* Section */
@@ -616,6 +703,7 @@ img {
   background-color: var(--accent-color);
   color: var(--primery-white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -682,13 +770,32 @@ img {
 
 .forma {
   display: flex;
+  margin: 0;
 }
 
-.form-text {
-  margin-top: 0;
-  margin-bottom: 0;
+.forma-email {
+  display: block;
+  padding: 18px 12px;
+  width: 358px;
+
+  color: #ffffff;
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+  border-radius: 4px;
 }
 
+.forma-email:focus {
+  outline: none;
+}
+
+.forma-email:focus:required:valid:not(:placeholder-shown) {
+  border: 1px solid green;
+}
+
+.forma-email:focus:required:invalid:not(:placeholder-shown) {
+  border: 1px solid red;
+}
 .copyright-container {
   padding-top: 18px;
   padding-bottom: 21px;

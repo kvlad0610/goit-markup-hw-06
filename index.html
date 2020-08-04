@@ -467,10 +467,13 @@
         <div class="forma-container">
           <b class="a-call-subtitle">Подпишитесь на рассылку</b>
           <form class="forma">
-            <p class="form-text">
-              <label for="email">E-mail</label><input type="email" id="email" />
-            </p>
-            <!-- <p class="form-text"><input type="submit" value="Подписаться" class="button" /></p> -->
+            <input
+              type="email"
+              class="forma-email"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
             <button class="button">
               Подписаться
               <svg class="forma-svg" width="24" height="24">
@@ -491,10 +494,41 @@
       <div class="modal">
         <p class="modal-subtitle">Оставьте свои данные, мы вам перезвоним</p>
         <form class="form">
-          <div class="form-field">
-            <label for="name">Имя</label>
-            <input type="text" name="name" id="name" />
-          </div>
+          <section class="form-field">
+            <label for="name" class="label">Имя</label>
+            <input
+              type="text"
+              class="form-field-input"
+              name="name"
+              id="name"
+              required
+              minlength="2"
+            />
+            <label for="tel" class="label">Телефон</label>
+            <input
+              type="tel"
+              class="form-field-input"
+              name="tel"
+              id="tel"
+              required
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            />
+            <label for="email" class="label">Почта</label>
+            <input type="email" class="form-field-input" name="email" id="email" required />
+          </section>
+
+          <section class="form-field">
+            <label for="comment" class="label">Коментарий</label>
+            <textarea name="comment" class="comment" id="comment"></textarea>
+          </section>
+          <section class="form-field">
+            <input type="checkbox" class="input-agreement" name="agreement" id="agreement" />
+            <label for="agreement" class="label-agreement"
+              >Соглашаюсь с рассылкой и принимаю
+              <a class="contract" href="">Условия договора</a>
+            </label>
+          </section>
+          <button type="submit" class="form-btn">Отправить</button>
         </form>
         <button class="modal-button" data-close-modal>
           <svg class="modal-button-svg">
