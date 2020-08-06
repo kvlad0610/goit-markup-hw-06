@@ -358,19 +358,19 @@
             </li>
             <li class="customers-item">
               <a class="customers-link link" href="">
-                <svg class="customers-img" width="50" height="50">
+                <svg class="customers-img" width="60" height="60">
                   <use href="./images/sprite.svg#logo-2"></use></svg
               ></a>
             </li>
             <li class="customers-item">
               <a class="customers-link link" href="">
-                <svg class="customers-img" width="45" height="45">
+                <svg class="customers-img" width="55" height="55">
                   <use href="./images/sprite.svg#logo-3"></use></svg
               ></a>
             </li>
             <li class="customers-item">
               <a class="customers-link link" href="">
-                <svg class="customers-img" width="80" height="80">
+                <svg class="customers-img" width="75" height="75">
                   <use href="./images/sprite.svg#logo-4"></use>
                 </svg>
               </a>
@@ -494,44 +494,63 @@
       <div class="modal">
         <p class="modal-subtitle">Оставьте свои данные, мы вам перезвоним</p>
         <form class="form">
-          <section class="form-field">
-            <label for="name" class="label">Имя</label>
+          <div class="form-field">
             <input
               type="text"
               class="form-field-input"
               name="name"
               id="name"
-              required
-              minlength="2"
+              placeholder=" "
             />
-            <label for="tel" class="label">Телефон</label>
-            <input
-              type="tel"
-              class="form-field-input"
-              name="tel"
-              id="tel"
-              required
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-            />
-            <label for="email" class="label">Почта</label>
-            <input type="email" class="form-field-input" name="email" id="email" required />
-          </section>
+            <label for="name" class="form-field-label">Имя</label>
+            <svg class="form-field-svg" width="12" height="12">
+              <use href="./images/sprite.svg#name"></use>
+            </svg>
+          </div>
 
-          <section class="form-field">
-            <label for="comment" class="label">Коментарий</label>
-            <textarea name="comment" class="comment" id="comment"></textarea>
-          </section>
-          <section class="form-field">
-            <input type="checkbox" class="input-agreement" name="agreement" id="agreement" />
-            <label for="agreement" class="label-agreement"
-              >Соглашаюсь с рассылкой и принимаю
-              <a class="contract" href="">Условия договора</a>
-            </label>
-          </section>
-          <button type="submit" class="form-btn">Отправить</button>
+          <div class="form-field">
+            <input type="tel" class="form-field-input" name="tel" id="tel" placeholder=" " />
+            <label for="tel" class="form-field-label">Телефон</label>
+            <svg class="form-field-svg" width="13" height="13">
+              <use href="./images/sprite.svg#phone"></use>
+            </svg>
+          </div>
+
+          <div class="form-field">
+            <input
+              type="email"
+              class="form-field-input"
+              name="email"
+              id="email"
+              placeholder=" "
+            />
+            <label for="email" class="form-field-label">Почта</label>
+            <svg class="form-field-svg" width="15" height="12">
+              <use href="./images/sprite.svg#email"></use>
+            </svg>
+          </div>
+
+          <div class="form-field-comment">
+            <textarea
+              type="text"
+              name="comment"
+              class="comment"
+              id="comment"
+              placeholder=" "
+            ></textarea>
+            <label for="comment" class="form-field-comment-label">Коментарий</label>
+          </div>
+
+          <label class="label-agreement">
+            <input type="checkbox" class="checkbox" name="agreement" />
+            <span class="checkbox-icon"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a class="contract" href="">Условия договора</a>
+          </label>
+          <button type="submit" class="button-submit">Отправить</button>
         </form>
-        <button class="modal-button" data-close-modal>
-          <svg class="modal-button-svg">
+        <button class="button-close" data-close-modal>
+          <svg class="button-close-svg">
             <use href="./images/sprite.svg#close-black"></use>
           </svg>
         </button>
