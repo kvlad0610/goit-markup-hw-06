@@ -331,6 +331,8 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field-input:focus {
@@ -355,7 +357,8 @@ img {
   left: 42px;
   transform: translateY(-50%);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field-svg {
@@ -363,6 +366,10 @@ img {
   top: 50%;
   left: 19px;
   transform: translateY(-50%);
+
+  fill: #212121;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .form-field-input:focus:required:valid:not(:placeholder-shown) {
@@ -392,14 +399,17 @@ img {
   /* color: #212121; */
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field-comment .form-field-comment-label {
+.form-field-comment-label {
   position: absolute;
   top: 12px;
   left: 16px;
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comment:focus {
@@ -433,6 +443,10 @@ img {
   border: 1.75px solid #000000;
   border-radius: 2px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .checkbox-icon {
@@ -478,7 +492,7 @@ img {
   top: 8px;
   right: 8px;
 
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
@@ -488,6 +502,15 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+}
+
+..button-close-svg {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-close-svg:hover,
+.button-close-svg:focus {
+  fill: #2196f3;
 }
 
 .comment:focus,
